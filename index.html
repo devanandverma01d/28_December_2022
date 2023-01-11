@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class Inheritance</title>
+    <style>
+        /*we can write css code here*/
+    </style>
+    <script src="./js/script.js"></script>
+    <script>
+        /*here we can write js code before closing of head tag*/
+    </script>
+</head>
+
+<body>
+
+
+
+    <script>
+        /*we can write JS code before closing of body tag*/
+        class MyClassA { //class follow PascalCase convention
+            //let's figure oput how many member are in a class.
+            //1. memeber1
+
+            //2. memeber 2
+
+            //3. memeber 3
+            //1. Method/function definition
+            addition(x, y) {// this is formal argument
+                //every method return something
+                return x + y;
+            }
+        }
+        //let's call function--
+        //in order to call a function inside a class we have to create an object of that class.
+        let myobjecta = new MyClassA();
+        let a = myobjecta.addition(5, 2);// this actual argument
+        console.log("The addtion is: " + a);
+        document.write("<h1>" + 'The addtion is: ' + a + "</h1>");
+        //--------------------------------------------------------------------------------
+
+        //let's define other class--
+        //syntax of Inheritance--
+        /*
+        class child extends parent{
+            
+        }
+        */
+        class MyClassB extends MyClassA {// class folows pascal case convention
+            //member1
+            //memeber2
+            //member3-- method definition
+            subtraction(x, y) {// this is formal argument
+                //every function return something
+                return x - y;
+            }
+        }
+        //let's call function--
+        //in order to call a function inside a class we have to create an object of that class.
+        let myobjectb = new MyClassB();
+        let s = myobjectb.subtraction(10, 5) /// this is actual argument
+        console.log("The Subtraction is: ", s);
+        document.write("<h1>" + 'The Subtraction is: ' + s + "</h1>");
+        //-----------------------------------------------------------------------------------
+
+        ///let'define other class---
+        //syntax of Inheritance--
+        /*
+        class child extends parent{
+
+        }
+        */
+        class MyClassC extends MyClassB { // class follows pascal case convention
+            //member1
+            //memeber2
+            //member3-- method definition
+            multiplication(x, y) {//  this is formal argument
+                //every method return something
+                return x * y;
+            }
+        }
+        //let's call function
+        // In order to call a method inside a class we have to create an object of that class.
+        let myobjectc = new MyClassC();
+        let m = myobjectc.multiplication(6, 5);// this is actual argument
+        console.log("The Multiplication is: ", m);
+        document.write("<h1>" + 'The Multiplication is: ' + m + "</h1>");
+        //---------------------------------------------------------------------------
+
+        //let's define other class--
+        //syntax of Inheritance--
+        /*
+        class child extends parent{
+            
+        }
+        */
+        class MyClassD extends MyClassC { // class follows pascal case convention
+            //member1
+            //memeber2
+            //member3-- method definition
+            division(x, y) {// thgis is formal argument
+                //every method return something
+                return x / y;
+            }
+        }
+        //let's call function-
+        //in order  to call a method inside a class we have to create an object of class.
+        let myobjectd = new MyClassD();
+        let d = myobjectd.division(100, 20); // this is actual argument
+        console.log("The Division is: ", d);
+        document.write('<h1>' + 'The Division is: ' + d + '</h1>');
+
+        let x = myobjectd.multiplication(25, 5);
+        console.log('The Multiplication is: ', x);
+        console.log('The Addition is: ', myobjectd.addition(15, 2));
+        console.log('The Subtraction is: ', myobjectd.subtraction(19, 5));
+        console.log('The division is: ', myobjectd.division(625, 25));
+    </script>
+</body>
+
+</html>
